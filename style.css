@@ -1,2 +1,11 @@
+body {
+    background-color: rgb(170, 86, 170);
+}
 
-
+h2 {
+    background-color: rgb(98, 35, 156);
+    text-align: center;
+    padding: 7px;
+    border: 2px solid black;
+    color: aliceblue;
+}
