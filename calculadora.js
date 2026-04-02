@@ -31,7 +31,7 @@ function multiplicacao() {
    document.getElementById("resultado").innerText = valor1.toString();
 }
 
-function divisão() {
+function divisao() {
    console.log("Valor 1: [" + document.getElementById("numero1").value + "]");
    console.log("Valor 2: [" + document.getElementById("numero2").value + "]");
    let valor1 = parseInt(document.getElementById("numero1").value) / parseInt(document.getElementById("numero2").value);
@@ -42,6 +42,5 @@ function divisão() {
 
 
 
-/*    document.getElementById("numero3").value = valor1.toString(); */
 
 
