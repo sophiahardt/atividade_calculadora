@@ -5,30 +5,11 @@ let operacao = "";
 
 
 function soma() {
-    let {n1, n2} = guardar_valores();
-    (n1 + n2);
+   console.log("Valor 1: [" + document.getElementById("numero1").value + "]");
+   console.log("Valor 2: [" + document.getElementById("numero2").value + "]");
+   let valor1 = parseInt(document.getElementById("numero1").value) + parseInt(document.getElementById("numero2").value);
+   console.log("Resultado: [" + valor1.toString() + "]");
+   alert("Resultado: " + valor1.toString());
+   document.getElementById("numero3").value = valor1.toString();
+   document.getElementById("resultado").innerText = valor1.toString();
 }
-
-function subtracao() {
-    let {n1, n2} = guardar_valores();
-    (n1 - n2);
-}
-
-function multiplicacao() {
-    let {n1, n2} = guardar_valores();
-    (n1 * n2);
-}
-
-function divisao() {
-    let {n1, n2} = guardar_valores();
-    (n1 / n2);
-}
-
-if operacao != "" {
-  visor = "5"
-}else {
-   let visor = document.getElementById("visor").value;
-   visor = visor + "1";
-}
-document.getElementById("visor").innerHTML = visor;
-
