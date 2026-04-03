@@ -7,7 +7,7 @@ let operacao = "";
 function soma() {
    console.log("Valor 1: [" + document.getElementById("numero1").value + "]");
    console.log("Valor 2: [" + document.getElementById("numero2").value + "]");
-   let valor1 = parseInt(document.getElementById("numero1").value) + parseInt(document.getElementById("numero2").value);
+   let valor1 = parseInt(document.getElementById("numero1").value) + parseFloat(document.getElementById("numero2").value);
    console.log("Resultado: [" + valor1.toString() + "]");
    alert("Resultado: " + valor1.toString());
    document.getElementById("resultado").innerText = valor1.toString();
@@ -16,7 +16,7 @@ function soma() {
 function subtracao() {
    console.log("Valor 1: [" + document.getElementById("numero1").value + "]");
    console.log("Valor 2: [" + document.getElementById("numero2").value + "]");
-   let valor1 = parseInt(document.getElementById("numero1").value) - parseInt(document.getElementById("numero2").value);
+   let valor1 = parseInt(document.getElementById("numero1").value) - parseFloat(document.getElementById("numero2").value);
    console.log("Resultado: [" + valor1.toString() + "]");
    alert("Resultado: " + valor1.toString());
    document.getElementById("resultado").innerText = valor1.toString();
@@ -25,7 +25,7 @@ function subtracao() {
 function multiplicacao() {
    console.log("Valor 1: [" + document.getElementById("numero1").value + "]");
    console.log("Valor 2: [" + document.getElementById("numero2").value + "]");
-   let valor1 = parseInt(document.getElementById("numero1").value) * parseInt(document.getElementById("numero2").value);
+   let valor1 = parseInt(document.getElementById("numero1").value) * parseFloat(document.getElementById("numero2").value);
    console.log("Resultado: [" + valor1.toString() + "]");
    alert("Resultado: " + valor1.toString());
    document.getElementById("resultado").innerText = valor1.toString();
@@ -34,7 +34,7 @@ function multiplicacao() {
 function divisao() {
    console.log("Valor 1: [" + document.getElementById("numero1").value + "]");
    console.log("Valor 2: [" + document.getElementById("numero2").value + "]");
-   let valor1 = parseInt(document.getElementById("numero1").value) / parseInt(document.getElementById("numero2").value);
+   let valor1 = parseInt(document.getElementById("numero1").value) / parseFloat(document.getElementById("numero2").value);
    console.log("Resultado: [" + valor1.toString() + "]");
    alert("Resultado: " + valor1.toString());
    document.getElementById("resultado").innerText = valor1.toString();
