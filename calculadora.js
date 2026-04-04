@@ -17,11 +17,20 @@ function validarCampos () {
    return true;
 }
 
+function validarDivisao() {
+   let numero2 = parseFloat (document.getElementById("numero2").value);
+   if (numero2 === 0) {
+      alert("Não é possível dividir por 0");
+      return false;
+   } 
+   return true;
+}
+
 function soma() {
    if (validarCampos()) {
       console.log("Valor 1: [" + document.getElementById("numero1").value + "]");
       console.log("Valor 2: [" + document.getElementById("numero2").value + "]");
-      let valor1 = parseInt(document.getElementById("numero1").value) + parseFloat(document.getElementById("numero2").value);
+      let valor1 = parseFloat(document.getElementById("numero1").value) + parseFloat(document.getElementById("numero2").value);
       console.log("Resultado: [" + valor1.toString() + "]");
       alert("Resultado: " + valor1.toString());
       document.getElementById("resultado").innerText = valor1.toString();
@@ -29,30 +38,36 @@ function soma() {
 }
 
 function subtracao() {
-   console.log("Valor 1: [" + document.getElementById("numero1").value + "]");
-   console.log("Valor 2: [" + document.getElementById("numero2").value + "]");
-   let valor1 = parseInt(document.getElementById("numero1").value) - parseFloat(document.getElementById("numero2").value);
-   console.log("Resultado: [" + valor1.toString() + "]");
-   alert("Resultado: " + valor1.toString());
-   document.getElementById("resultado").innerText = valor1.toString();
+   if (validarCampos()) {
+      console.log("Valor 1: [" + document.getElementById("numero1").value + "]");
+      console.log("Valor 2: [" + document.getElementById("numero2").value + "]");
+      let valor1 = parseFloat(document.getElementById("numero1").value) - parseFloat(document.getElementById("numero2").value);
+      console.log("Resultado: [" + valor1.toString() + "]");
+      alert("Resultado: " + valor1.toString());
+      document.getElementById("resultado").innerText = valor1.toString();
+   }
 }
 
 function multiplicacao() {
-   console.log("Valor 1: [" + document.getElementById("numero1").value + "]");
-   console.log("Valor 2: [" + document.getElementById("numero2").value + "]");
-   let valor1 = parseInt(document.getElementById("numero1").value) * parseFloat(document.getElementById("numero2").value);
-   console.log("Resultado: [" + valor1.toString() + "]");
-   alert("Resultado: " + valor1.toString());
-   document.getElementById("resultado").innerText = valor1.toString();
+   if (validarCampos()) {
+      console.log("Valor 1: [" + document.getElementById("numero1").value + "]");
+      console.log("Valor 2: [" + document.getElementById("numero2").value + "]");
+      let valor1 = parseFloat(document.getElementById("numero1").value) * parseFloat(document.getElementById("numero2").value);
+      console.log("Resultado: [" + valor1.toString() + "]");
+      alert("Resultado: " + valor1.toString());
+      document.getElementById("resultado").innerText = valor1.toString();
+   }
 }
 
 function divisao() {
-   console.log("Valor 1: [" + document.getElementById("numero1").value + "]");
-   console.log("Valor 2: [" + document.getElementById("numero2").value + "]");
-   let valor1 = parseInt(document.getElementById("numero1").value) / parseFloat(document.getElementById("numero2").value);
-   console.log("Resultado: [" + valor1.toString() + "]");
-   alert("Resultado: " + valor1.toString());
-   document.getElementById("resultado").innerText = valor1.toString();
+   if (validarCampos() && validarDivisao()) {
+      console.log("Valor 1: [" + document.getElementById("numero1").value + "]");
+      console.log("Valor 2: [" + document.getElementById("numero2").value + "]");
+      let valor1 = parseFloat(document.getElementById("numero1").value) / parseFloat(document.getElementById("numero2").value);
+      console.log("Resultado: [" + valor1.toString() + "]");
+      alert("Resultado: " + valor1.toString());
+      document.getElementById("resultado").innerText = valor1.toString();
+   }
 }
 
 
